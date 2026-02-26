@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  
+  --color-gold-400: #FBBF24;
+  --color-gold-500: #F59E0B;
+  --color-gold-600: #D97706;
+  
+  --color-cinema-900: #0A0A0A;
+  --color-cinema-800: #121212;
+  --color-cinema-700: #1A1A1A;
+  --color-cinema-600: #262626;
+}
+
+body {
+  @apply bg-cinema-900 text-gray-100 font-sans antialiased selection:bg-gold-500/30 selection:text-gold-400;
+}
+
+/* Custom scrollbar for cinematic feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-cinema-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-cinema-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gold-600;
+}
+
+/* Utilities */
+.glass-panel {
+  @apply bg-cinema-800/80 backdrop-blur-md border border-white/5 shadow-xl;
+}
+
+.text-gradient-gold {
+  @apply bg-gradient-to-r from-gold-400 to-gold-600 bg-clip-text text-transparent;
+}
